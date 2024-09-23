@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LandingHeader from "../components/Tesla/landingTesla.astro";
+import Model3 from "../components/Tesla/Model3.astro";
+import Modelx from "../components/Tesla/Modelx.astro";
+import Modely from "../components/Tesla/Modely.astro";
+import Models from "../components/Tesla/Models.astro";
+import ExpTesla from "../components/Tesla/ExpTesla.astro";
+import Energia from "../components/Tesla/Energia.astro";
+---
+
+<!-- //snap-y snap-mandatory para que baje el scroll directamente a la siguiente
+section //snap-center -->
+<Layout title="Welcome to Astro.">
+  <LandingHeader />
+  <main class="relative w-full h-screen overflow-auto overflow-x-hidden">
+    <div class="">
+      <Model3 />
+    </div>
+    <div class="">
+      <Modely />
+    </div>
+    <div class="">
+      <Modelx />
+    </div>
+    <div class="">
+      <Models />
+    </div>
+    <div class="">
+      <ExpTesla />
+    </div>
+    <div class="">
+      <Energia />
+    </div>
+  </main>
+</Layout>

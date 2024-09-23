@@ -1,0 +1,35 @@
+---
+import ModelX from "../../../public/Tesla/Model-X.avif"
+---
+
+<section
+  class="landing-section bg-black h-screen w-screen text-center overflow-hidden relative"
+  data-header-color="white"
+>
+  <div class="z-20 relative h-full flex flex-col">
+    <header class="flex flex-col">
+      <h2 class="text-black pt-[140px] pr-6 text-[40px] font-medium">
+        Model X
+      </h2>
+      <p class="text-black text-sm">Agenda hoy una prueba de manejo</p>
+    </header>
+
+    <footer class="flex flex-col flex-grow justify-end pb-32">
+      <div class="flex space-x-6 mx-auto">
+        <a
+        class="border-[3px] border-white bg-white text-sm rounded font-medium text-black px-12 py-2 inline-block transition-colors duration-300 hover:border-white hover:bg-gray-200 w-72"
+        href="#"
+      >
+        Mas informacion
+      </a>
+      </div>
+    </footer>
+  </div>
+  <div class="absolute top-0 bottom-0 h-full w-full">
+    <img
+      src={ModelX.src}
+      alt="primerFondo"
+      class="object-center object-cover h-full w-full"
+    />
+  </div>
+</section>
