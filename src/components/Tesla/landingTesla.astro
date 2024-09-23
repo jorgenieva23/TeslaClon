@@ -320,6 +320,7 @@ const Carga = [
       const headerEl = document.querySelector("#landing-header") as HTMLElement;
       const mainEl = document.querySelector("main");
       const modal = document.getElementById("megamenu-modal");
+
       const sections = document.querySelectorAll(".modal-section");
       const navLinks = document.querySelectorAll("nav ul li a");
       const menuBackDrop = document.querySelector(
@@ -341,8 +342,8 @@ const Carga = [
           });
 
           // Mostrar el modal con Tailwind
-          modal.classList.remove("top-[-100%]", "opacity-0");
-          modal.classList.add("top-0", "opacity-100");
+          modal?.classList.remove("top-[-100%]", "opacity-0");
+          modal?.classList.add("top-0", "opacity-100");
 
           // Cambiar el color del texto del header
           headerEl.style.color = "#000";
@@ -355,10 +356,10 @@ const Carga = [
       });
 
       // Ocultar el modal y remover el blur al salir del mismo
-      modal.addEventListener("mouseleave", () => {
+      modal?.addEventListener("mouseleave", () => {
         // Ocultar el modal con Tailwind
-        modal.classList.remove("top-0", "opacity-100");
-        modal.classList.add("top-[-100%]", "opacity-0");
+        modal?.classList.remove("top-0", "opacity-100");
+        modal?.classList.add("top-[-100%]", "opacity-0");
 
         // Restaurar el color original del header
         headerEl.style.color = "";
@@ -370,8 +371,8 @@ const Carga = [
       });
 
       // Controlar la visibilidad del header al hacer scroll
-      mainEl.addEventListener("scroll", () => {
-        const currentScrollTop = mainEl.scrollTop;
+      mainEl?.addEventListener("scroll", () => {
+        const currentScrollTop = mainEl?.scrollTop;
 
         headerEl.classList.toggle(
           "header-hidden",
@@ -439,7 +440,10 @@ const Carga = [
         const { isIntersecting } = entry;
         if (isIntersecting) {
           const color = entry.target.getAttribute("data-header-color");
-          headerEl.style.color = color;
+          if (color !== null) {
+            // Solo asigna si no es null
+            headerEl.style.color = color;
+          }
         }
       });
     }, observerOptions);
